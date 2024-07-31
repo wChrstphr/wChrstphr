@@ -9,7 +9,7 @@
 
 <p>
 
-Discovering new thigns
+Discovering new things
   
 </p>
 
@@ -21,10 +21,10 @@ Discovering new thigns
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" align="center" width = "40"  height="30" alt="java logo"  />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" align="center" width = "40"  height="30" alt="c logo"  />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" align="center" width = "40"  height="30" alt="git logo"  />
-  <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" align="right" width="120">
 </div>
 
 <br/>
 <div align="center">
+  <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" align="right" width="120">
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=wChrstphr&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=tokyonight&hide_border=true" height="150" alt="languages graph"/>
 </div>
