@@ -8,7 +8,9 @@
 </p>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in mollis augue. Donec sodales egestas lacus vitae dictum. Fusce nec justo vitae eros rhoncus porta vestibulum vitae dolor. Fusce sagittis nisi lorem, id maximus lorem fringilla ut. Ut quam lectus, porta non iaculis in, mollis ut justo. Morbi laoreet, mi non molestie pretium, nulla metus congue enim, eleifend aliquam metus ex ac nulla. Ut volutpat sem in diam posuere, nec consectetur libero feugiat.
+
+Discovering new thigns
+  
 </p>
 
 <h2>Technologies<h2/>
@@ -26,19 +28,3 @@
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=wChrstphr&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=tokyonight&hide_border=true" height="150" alt="languages graph"/>
 </div>
- 
-
-
-<!--
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
