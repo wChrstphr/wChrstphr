@@ -9,22 +9,21 @@
 
 <p>
 
-Discovering new things
+<img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" align="right" width="140">
   
 </p>
 
-<h2>Technologies<h2/>
-<div style="display: inline_block"> 
+<h2 align="center">Technologies<h2/>
+<div style="display: inline_block" align="center"> 
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" align="center" width = "40" height="30" alt="html5 logo"  />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" align="center" width = "40"  height="30" alt="css3 logo"  />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" align="center" width = "40"  height="30" alt="javascript logo"  />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" align="center" width = "40"  height="30" alt="java logo"  />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" align="center" width = "40"  height="30" alt="c logo"  />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" align="center" width = "40"  height="30" alt="git logo"  />
 </div>
 
 <br/>
-<div align="left">
-  <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" align="right" width="120">
+<p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=wChrstphr&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=tokyonight&hide_border=true" height="150" alt="languages graph"/>
-</div>
+</p>
+
