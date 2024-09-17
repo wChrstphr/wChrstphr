@@ -21,18 +21,13 @@
   </p>
 
   <h2 align="left">Technologies</h2>
-  <div style="display: inline_block" align="left"> 
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" align="center" width="40" height="30" alt="html5 logo" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" align="center" width="40" height="30" alt="css3 logo" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" align="center" width="40" height="30" alt="java logo" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" align="center" width="40" height="30" alt="c logo" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" align="center" width="40" height="30" alt="git logo" />
-  </div>
+  
+  [![My Skills](https://skillicons.dev/icons?i=html,css,java,c,js,nodejs,git,&perline=8)](https://skillicons.dev)
 
   <br/>
 
   <p align="left">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs?username=wChrstphr&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=tokyonight&hide_border=true" height="150" alt="languages graph" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs?username=wChrstphr&locale=en&hide_title=false&hide=html,css,c%2B%2B&layout=compact&card_width=320&langs_count=5&theme=tokyonight&hide_border=true" height="150" alt="languages graph" />
   </p>
 
 <h2></h2>
