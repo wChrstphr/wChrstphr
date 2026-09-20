@@ -33,3 +33,29 @@ def test_average_color_empty_returns_black():
 def test_average_color_computes_mean_per_channel():
     pixels = np.array([[10, 20, 30], [30, 40, 50]])
     assert average_color(pixels) == (20.0, 30.0, 40.0)
+
+
+from tools.blockart.gridify import ArtCell, build_art_cells
+
+
+def test_build_art_cells_single_foreground_cell():
+    # 4x4 image, 2x2 grid -> each cell is 2x2 px.
+    image = np.zeros((4, 4, 3), dtype=np.uint8)
+    image[0:2, 0:2] = (255, 0, 0)  # top-left cell: solid red
+    mask = np.zeros((4, 4), dtype=np.uint8)
+    mask[0:2, 0:2] = 1  # only top-left cell is foreground
+
+    cells = build_art_cells(image, mask, cols=2, rows=2)
+
+    assert cells == [ArtCell(row=0, col=0, char="█", color="#ff0000")]
+
+
+def test_build_art_cells_skips_low_coverage_cells():
+    image = np.zeros((4, 4, 3), dtype=np.uint8)
+    mask = np.zeros((4, 4), dtype=np.uint8)
+    mask[0, 0] = 1  # 1 of 4 px in the cell -> coverage 0.25 -> "░"
+
+    cells = build_art_cells(image, mask, cols=2, rows=2)
+
+    assert len(cells) == 1
+    assert cells[0].char == "░"
