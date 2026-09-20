@@ -797,7 +797,7 @@ python -m tools.blockart.generate /path/to/your/photo.png --out assets/art_data.
 
 - [ ] **Step 2: Visually inspect the preview**
 
-Open `assets/art_preview.png`. Check that the silhouette reads as a head with round glasses and hair parted in the middle. If the segmentation looks off (background leaking in, or part of the head cut off), adjust the crop by passing a tighter/looser `--cols`/`--rows`, or pre-crop the source photo tighter around the head/shoulders and re-run Step 1.
+Open `assets/art_preview.png`. Check that the silhouette reads as a head with round glasses and hair parted in the middle. If the segmentation looks off (background leaking in, or part of the head cut off), adjust `--margin` and/or `--iterations` (the GrabCut rect margin and iteration count) to fix segmentation quality, or pre-crop the source photo tighter around the head/shoulders and re-run Step 1. (`--cols`/`--rows` only change grid resolution, not segmentation, so they won't help here.)
 
 - [ ] **Step 3: Confirm no raw photo made it into the repo**
 

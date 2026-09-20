@@ -13,7 +13,7 @@ def test_default_rect_applies_five_percent_margin():
 def test_generate_writes_art_data_and_preview(tmp_path):
     photo_path = tmp_path / "photo.png"
     image = np.full((60, 60, 3), 10, dtype=np.uint8)
-    image[15:45, 15:45] = 240
+    image[12:48, 12:48] = 240
     cv2.imwrite(str(photo_path), image)
 
     out_path = tmp_path / "art_data.json"
@@ -25,6 +25,12 @@ def test_generate_writes_art_data_and_preview(tmp_path):
     assert data["cols"] == 6
     assert data["rows"] == 6
     assert len(data["cells"]) > 0
+    # Corner cell (0, 0) -> image[0:10, 0:10] is entirely outside the bright
+    # square, so it must be treated as background and omitted.
+    assert not any(c["row"] == 0 and c["col"] == 0 for c in data["cells"])
+    # Center cell (3, 3) -> image[30:40, 30:40] is well inside the bright
+    # square, so it must be present.
+    assert any(c["row"] == 3 and c["col"] == 3 for c in data["cells"])
     assert preview_path.exists()
 
 

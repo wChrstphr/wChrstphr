@@ -24,13 +24,15 @@ def generate(
     preview_path: Path | None,
     cols: int,
     rows: int,
+    margin_ratio: float = 0.05,
+    iterations: int = 8,
 ) -> None:
     image_bgr = cv2.imread(str(photo_path))
     if image_bgr is None:
         raise FileNotFoundError(f"could not read image: {photo_path}")
     height, width = image_bgr.shape[:2]
-    rect = default_rect(width, height)
-    mask = segment_foreground(image_bgr, rect)
+    rect = default_rect(width, height, margin_ratio=margin_ratio)
+    mask = segment_foreground(image_bgr, rect, iterations=iterations)
     image_rgb = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB)
     cells = build_art_cells(image_rgb, mask, cols=cols, rows=rows)
     out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -46,8 +48,28 @@ def main() -> None:
     parser.add_argument("--preview", type=Path, default=Path("assets/art_preview.png"))
     parser.add_argument("--cols", type=int, default=60)
     parser.add_argument("--rows", type=int, default=40)
+    parser.add_argument(
+        "--margin",
+        type=float,
+        default=0.05,
+        help="GrabCut rect margin as a fraction of image size",
+    )
+    parser.add_argument(
+        "--iterations",
+        type=int,
+        default=8,
+        help="GrabCut iteration count",
+    )
     args = parser.parse_args()
-    generate(args.photo, args.out, args.preview, args.cols, args.rows)
+    generate(
+        args.photo,
+        args.out,
+        args.preview,
+        args.cols,
+        args.rows,
+        margin_ratio=args.margin,
+        iterations=args.iterations,
+    )
 
 
 if __name__ == "__main__":
