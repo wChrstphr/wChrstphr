@@ -1,0 +1,72 @@
+{
+  "Bootcamps": {
+    "additions": 13901,
+    "commit_count": 85,
+    "deletions": 846
+  },
+  "Date-n-Weather-Today": {
+    "additions": 3900,
+    "commit_count": 558,
+    "deletions": 3618
+  },
+  "UnB.Software-Engineering": {
+    "additions": 75425,
+    "commit_count": 50,
+    "deletions": 24058
+  },
+  "api_testing": {
+    "additions": 373,
+    "commit_count": 3,
+    "deletions": 0
+  },
+  "competitive-programming": {
+    "additions": 4,
+    "commit_count": 3,
+    "deletions": 0
+  },
+  "curso-php": {
+    "additions": 663,
+    "commit_count": 1,
+    "deletions": 0
+  },
+  "desafio-db": {
+    "additions": 4018,
+    "commit_count": 2,
+    "deletions": 121
+  },
+  "desafio-target": {
+    "additions": 203,
+    "commit_count": 3,
+    "deletions": 11
+  },
+  "microsoft-python-development": {
+    "additions": 1734,
+    "commit_count": 6,
+    "deletions": 153
+  },
+  "nlw-17-javascript-iniciante": {
+    "additions": 1066,
+    "commit_count": 19,
+    "deletions": 139
+  },
+  "portfolio": {
+    "additions": 801,
+    "commit_count": 11,
+    "deletions": 70
+  },
+  "sentiment-analysis": {
+    "additions": 1580792,
+    "commit_count": 5,
+    "deletions": 125819
+  },
+  "skills-introduction-to-github": {
+    "additions": 648,
+    "commit_count": 11,
+    "deletions": 0
+  },
+  "wChrstphr": {
+    "additions": 10214,
+    "commit_count": 32,
+    "deletions": 135
+  }
+}
