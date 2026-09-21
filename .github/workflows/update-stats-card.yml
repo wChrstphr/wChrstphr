@@ -1,0 +1,29 @@
+name: Update Stats Card
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "assets/art_data.json"
+
+jobs:
+  update-card:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-statscard.txt
+      - run: python -m statscard.update_card
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update stats card"
+          file_pattern: "dark_mode.svg light_mode.svg cache/loc_cache.json"
