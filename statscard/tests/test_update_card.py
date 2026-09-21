@@ -45,6 +45,25 @@ def test_build_card_data_combines_stats_and_uptime(mock_fetch_profile, mock_comp
 
 @patch("statscard.update_card.compute_loc_stats")
 @patch("statscard.update_card.fetch_profile_stats")
+def test_build_card_data_excludes_configured_repos_from_loc(mock_fetch_profile, mock_compute_loc):
+    mock_fetch_profile.return_value = ProfileStats(
+        repos=3,
+        stars=0,
+        followers=0,
+        commits=0,
+        repo_names=["a", "sentiment-analysis", "b"],
+        created_year=2023,
+    )
+    mock_compute_loc.return_value = LocStats(additions=0, deletions=0)
+
+    build_card_data("fake-token", date(2026, 9, 1))
+
+    called_repo_names = mock_compute_loc.call_args.args[1]
+    assert called_repo_names == ["a", "b"]
+
+
+@patch("statscard.update_card.compute_loc_stats")
+@patch("statscard.update_card.fetch_profile_stats")
 def test_main_writes_both_svg_files(mock_fetch_profile, mock_compute_loc, tmp_path, monkeypatch):
     mock_fetch_profile.return_value = ProfileStats(
         repos=1, stars=1, followers=1, commits=1, repo_names=[], created_year=2025

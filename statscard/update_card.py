@@ -14,6 +14,11 @@ from statscard.uptime import format_uptime
 LOGIN = "wChrstphr"
 UPTIME_START = date(2025, 2, 1)
 
+# Repos whose lines-of-code are skewed by large non-code data files rather
+# than actual authored code (e.g. a bundled dataset), so they're excluded
+# from the LOC stat to keep it meaningful.
+LOC_EXCLUDED_REPOS = {"sentiment-analysis"}
+
 FIELDS_STATIC = {
     "os": "Linux / Windows 11 / Android",
     "host": "Presidência da República — DSIC",
@@ -31,7 +36,8 @@ def load_art_cells(path: Path) -> list[dict]:
 
 def build_card_data(token: str, today: date) -> tuple[dict, dict]:
     profile = fetch_profile_stats(LOGIN, token, today.year)
-    loc = compute_loc_stats(LOGIN, profile.repo_names, token, Path("cache/loc_cache.json"))
+    loc_repo_names = [name for name in profile.repo_names if name not in LOC_EXCLUDED_REPOS]
+    loc = compute_loc_stats(LOGIN, loc_repo_names, token, Path("cache/loc_cache.json"))
     fields = dict(FIELDS_STATIC)
     fields["uptime"] = format_uptime(UPTIME_START, today)
     stats = {
