@@ -11,10 +11,10 @@
 </p>
 
 ## 🚀 Sobre Mim
-<p align="left">
-  <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" align="right" width="140" alt="Giphy" />
-  Sou um estudante de Engenharia de Software que ama descobrir, aprender e testar novas tecnologias. Busco constantemente expandir meu aprendizado aplicando conhecimento em projetos desafiadores.
-</p>
+
+Sou um estudante de Engenharia de Software que ama descobrir, aprender e testar novas tecnologias. Busco constantemente expandir meu aprendizado aplicando conhecimento em projetos desafiadores.
+
+Alguns projetos que gosto de destacar: [`portfolio`](https://github.com/wChrstphr/portfolio), [`sentiment-analysis`](https://github.com/wChrstphr/sentiment-analysis) e [`Mestrado`](https://github.com/wChrstphr/Mestrado).
 
 <hr/>
 
@@ -34,12 +34,16 @@
 
 <hr/>
 
-## 📊 Estatísticas do GitHub
+## 💻 Atividade no GitHub
 
 <p align="center">
-  <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs?username=wChrstphr&locale=en&hide_title=false&hide=html,css&layout=compact&card_width=320&langs_count=5&theme=tokyonight&hide_border=true" alt="Top Languages" />
-  &nbsp;
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg">
+    <source media="(prefers-color-scheme: light)" srcset="light_mode.svg">
+    <img alt="GitHub stats card" src="dark_mode.svg">
+  </picture>
 </p>
+
 <hr/>
 
 ## 📫 Contato
