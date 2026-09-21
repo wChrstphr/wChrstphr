@@ -4,7 +4,7 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
-from statscard.github_client import run_graphql_query
+from statscard.github_client import GitHubAPIError, run_graphql_query
 
 _VIEWER_ID_QUERY = "query { viewer { id } }"
 
@@ -101,6 +101,11 @@ def _save_cache(cache_path: Path, cache: dict) -> None:
 def compute_loc_stats(login: str, repo_names: list[str], token: str, cache_path: Path) -> LocStats:
     """Sum additions/deletions across repo_names, skipping the expensive
     per-commit history fetch for any repo whose commit count matches cache.
+
+    A repo whose full-history fetch fails (e.g. a persistent 502 from
+    GitHub's API for that specific repo) falls back to its last cached
+    additions/deletions rather than crashing the whole run; a repo that
+    has never been cached and fails contributes 0 for this run.
     """
     cache = _load_cache(cache_path)
     total_additions = 0
@@ -114,8 +119,15 @@ def compute_loc_stats(login: str, repo_names: list[str], token: str, cache_path:
         else:
             if author_id is None:
                 author_id = _fetch_viewer_id(token)
-            _, additions, deletions = _fetch_repo_loc(login, repo, author_id, token)
-            cache[repo] = {"commit_count": commit_count, "additions": additions, "deletions": deletions}
+            try:
+                _, additions, deletions = _fetch_repo_loc(login, repo, author_id, token)
+                cache[repo] = {"commit_count": commit_count, "additions": additions, "deletions": deletions}
+            except GitHubAPIError as error:
+                print(f"warning: failed to fetch LOC for {repo!r}, using cached value: {error}")
+                if cached:
+                    additions, deletions = cached["additions"], cached["deletions"]
+                else:
+                    additions, deletions = 0, 0
         total_additions += additions
         total_deletions += deletions
     _save_cache(cache_path, cache)

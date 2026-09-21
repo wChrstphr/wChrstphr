@@ -1,6 +1,7 @@
 import json
 from unittest.mock import patch
 
+from statscard.github_client import GitHubAPIError
 from statscard.loc import LocStats, compute_loc_stats
 
 
@@ -65,3 +66,41 @@ def test_compute_loc_stats_starts_empty_when_no_cache_file(tmp_path):
 
     assert result == LocStats(additions=16, deletions=3)
     assert cache_path.exists()
+
+
+def _fake_run_query_failing_history(query, variables, token):
+    if "viewer { id }" in query:
+        return {"viewer": {"id": "AUTHOR123"}}
+    if "history { totalCount }" in query:
+        return {
+            "repository": {
+                "defaultBranchRef": {"target": {"history": {"totalCount": 19}}}
+            }
+        }
+    if "nodes { additions deletions }" in query:
+        raise GitHubAPIError("GitHub API returned 502: <html>502 Bad Gateway</html>")
+    raise AssertionError(f"unexpected query: {query}")
+
+
+def test_compute_loc_stats_falls_back_to_cache_when_fetch_fails(tmp_path):
+    cache_path = tmp_path / "loc_cache.json"
+    cache_path.write_text(
+        json.dumps({"Mestrado": {"commit_count": 5, "additions": 50, "deletions": 10}}),
+        encoding="utf-8",
+    )
+
+    with patch("statscard.loc.run_graphql_query", side_effect=_fake_run_query_failing_history):
+        result = compute_loc_stats("wChrstphr", ["Mestrado"], "fake-token", cache_path)
+
+    # commit_count changed (5 -> 19) so a fresh fetch is attempted, fails, and
+    # falls back to the stale cached values rather than crashing.
+    assert result == LocStats(additions=50, deletions=10)
+
+
+def test_compute_loc_stats_falls_back_to_zero_when_fetch_fails_and_no_cache(tmp_path):
+    cache_path = tmp_path / "does_not_exist.json"
+
+    with patch("statscard.loc.run_graphql_query", side_effect=_fake_run_query_failing_history):
+        result = compute_loc_stats("wChrstphr", ["Mestrado"], "fake-token", cache_path)
+
+    assert result == LocStats(additions=0, deletions=0)
