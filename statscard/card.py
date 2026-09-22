@@ -1,14 +1,9 @@
 from __future__ import annotations
 
-CARD_WIDTH = 985
-CARD_HEIGHT = 530
+CARD_WIDTH = 620
+CARD_HEIGHT = 250
 
-CHAR_W = 6.3
-CHAR_H = 11.2
-ART_LEFT = 20
-ART_TOP = 40
-
-TEXT_LEFT = 400
+TEXT_LEFT = 24
 LINE_H = 20
 
 _THEMES = {
@@ -50,7 +45,7 @@ def _escape(text: str) -> str:
     return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def render_svg(theme: str, art_cells: list[dict], fields: dict, stats: dict) -> str:
+def render_svg(theme: str, fields: dict, stats: dict) -> str:
     colors = _THEMES[theme]
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{CARD_HEIGHT}" '
@@ -60,22 +55,14 @@ def render_svg(theme: str, art_cells: list[dict], fields: dict, stats: dict) -> 
         f'fill="{colors["bg"]}" stroke="{colors["border"]}"/>',
     ]
 
-    for cell in art_cells:
-        x = ART_LEFT + cell["col"] * CHAR_W
-        y = ART_TOP + (cell["row"] + 1) * CHAR_H
-        parts.append(
-            f'<text class="art-cell" x="{x:.1f}" y="{y:.1f}" fill="{cell["color"]}">'
-            f'{_escape(cell["char"])}</text>'
-        )
-
-    y = 50
+    y = 30
     parts.append(
         f'<text x="{TEXT_LEFT}" y="{y}" fill="{colors["title"]}" font-weight="bold">'
         f"christopher@github</text>"
     )
     y += LINE_H
     parts.append(
-        f'<line x1="{TEXT_LEFT}" y1="{y - 14}" x2="{TEXT_LEFT + 300}" y2="{y - 14}" '
+        f'<line x1="{TEXT_LEFT}" y1="{y - 14}" x2="{CARD_WIDTH - TEXT_LEFT}" y2="{y - 14}" '
         f'stroke="{colors["dim"]}"/>'
     )
 
@@ -91,7 +78,7 @@ def render_svg(theme: str, art_cells: list[dict], fields: dict, stats: dict) -> 
 
     y += 8
     parts.append(
-        f'<line x1="{TEXT_LEFT}" y1="{y - 14}" x2="{TEXT_LEFT + 300}" y2="{y - 14}" '
+        f'<line x1="{TEXT_LEFT}" y1="{y - 14}" x2="{CARD_WIDTH - TEXT_LEFT}" y2="{y - 14}" '
         f'stroke="{colors["dim"]}"/>'
     )
     stats_line = (

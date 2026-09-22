@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import argparse
-import json
 import os
 from datetime import date
 from pathlib import Path
@@ -29,11 +28,6 @@ FIELDS_STATIC = {
 }
 
 
-def load_art_cells(path: Path) -> list[dict]:
-    data = json.loads(path.read_text(encoding="utf-8"))
-    return data["cells"]
-
-
 def build_card_data(token: str, today: date) -> tuple[dict, dict]:
     profile = fetch_profile_stats(LOGIN, token, today.year)
     loc_repo_names = [name for name in profile.repo_names if name not in LOC_EXCLUDED_REPOS]
@@ -53,17 +47,15 @@ def build_card_data(token: str, today: date) -> tuple[dict, dict]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Regenerate dark_mode.svg / light_mode.svg")
-    parser.add_argument("--art", type=Path, default=Path("assets/art_data.json"))
     parser.add_argument("--dark-out", type=Path, default=Path("dark_mode.svg"))
     parser.add_argument("--light-out", type=Path, default=Path("light_mode.svg"))
     args = parser.parse_args()
 
     token = os.environ["ACCESS_TOKEN"]
-    art_cells = load_art_cells(args.art)
     fields, stats = build_card_data(token, date.today())
 
-    args.dark_out.write_text(render_svg("dark", art_cells, fields, stats), encoding="utf-8")
-    args.light_out.write_text(render_svg("light", art_cells, fields, stats), encoding="utf-8")
+    args.dark_out.write_text(render_svg("dark", fields, stats), encoding="utf-8")
+    args.light_out.write_text(render_svg("light", fields, stats), encoding="utf-8")
 
 
 if __name__ == "__main__":

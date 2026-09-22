@@ -1,22 +1,9 @@
-import json
 from datetime import date
 from unittest.mock import patch
 
 from statscard.loc import LocStats
 from statscard.stats import ProfileStats
-from statscard.update_card import build_card_data, load_art_cells, main
-
-
-def test_load_art_cells_reads_cells_list(tmp_path):
-    art_path = tmp_path / "art_data.json"
-    art_path.write_text(
-        json.dumps({"cols": 2, "rows": 1, "cells": [{"row": 0, "col": 0, "char": "█", "color": "#000000"}]}),
-        encoding="utf-8",
-    )
-
-    cells = load_art_cells(art_path)
-
-    assert cells == [{"row": 0, "col": 0, "char": "█", "color": "#000000"}]
+from statscard.update_card import build_card_data, main
 
 
 @patch("statscard.update_card.compute_loc_stats")
@@ -71,8 +58,6 @@ def test_main_writes_both_svg_files(mock_fetch_profile, mock_compute_loc, tmp_pa
     mock_compute_loc.return_value = LocStats(additions=1, deletions=1)
     monkeypatch.setenv("ACCESS_TOKEN", "fake-token")
 
-    art_path = tmp_path / "art_data.json"
-    art_path.write_text(json.dumps({"cols": 1, "rows": 1, "cells": []}), encoding="utf-8")
     dark_out = tmp_path / "dark_mode.svg"
     light_out = tmp_path / "light_mode.svg"
 
@@ -80,8 +65,6 @@ def test_main_writes_both_svg_files(mock_fetch_profile, mock_compute_loc, tmp_pa
         "sys.argv",
         [
             "update_card.py",
-            "--art",
-            str(art_path),
             "--dark-out",
             str(dark_out),
             "--light-out",
