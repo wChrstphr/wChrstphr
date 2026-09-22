@@ -1,36 +1,13 @@
-<p align="center">
-  <a href="https://github.com/wChrstphr">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=30&pause=1000&color=2D52FF&center=true&width=435&lines=Christopher+Paraizo" alt="Typing SVG" />
-  </a>
-</p>
+<h1 align="center">Christopher Paraizo</h1>
+<p align="center">Engenharia de Software (UnB) · Coordenador de Projetos na Presidência da República</p>
 
-<p align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=2D52FF&center=true&width=435&lines=Software+Engineering+Student;Learning+as+a+way+of+life" alt="Typing SVG" />
-  </a>
-</p>
+## 🚀 Sobre mim
 
-## 🚀 Sobre Mim
-
-Sou um estudante de Engenharia de Software que ama descobrir, aprender e testar novas tecnologias. Busco constantemente expandir meu aprendizado aplicando conhecimento em projetos desafiadores.
-
-Alguns projetos que gosto de destacar: [`portfolio`](https://github.com/wChrstphr/portfolio), [`sentiment-analysis`](https://github.com/wChrstphr/sentiment-analysis) e [`Mestrado`](https://github.com/wChrstphr/Mestrado).
-
-<hr/>
-
-## 🛠️ Tecnologias e Ferramentas
-
-### Linguagens de Programação
-[![My Skills](https://skillicons.dev/icons?i=c,java,python,js&perline=4)](https://skillicons.dev)
-
-### Front-End
-[![My Skills](https://skillicons.dev/icons?i=html,css,figma&perline=3)](https://skillicons.dev)
-
-### Back-End e Banco de Dados
-[![My Skills](https://skillicons.dev/icons?i=nodejs,django,postgres&perline=3)](https://skillicons.dev)
-
-### Ferramentas e DevOps
-[![My Skills](https://skillicons.dev/icons?i=git,docker,postman&perline=3)](https://skillicons.dev)
+- 🎓 Estudante de Engenharia de Software na UnB, em fase final da graduação
+- 💼 Coordenador de Projetos na Presidência da República (DSIC) — antes disso, Chefe de Projeto e Estagiário em Engenharia de Software
+- 🛠️ Construí automações que reduziram em até 90% o tempo de processos manuais, conduzi migrações de banco sem downtime, e ajudei a tirar do ar projetos como o UnBTV e o Capital Nexus
+- 🧠 Trabalho com Python, SQL, Docker e Power BI no dia a dia, e uso Claude Code como parte do fluxo de desenvolvimento
+- 📍 Brasília, DF — nas horas vagas, gosto de ler, viajar e nadar
 
 <hr/>
 
@@ -47,6 +24,8 @@ Alguns projetos que gosto de destacar: [`portfolio`](https://github.com/wChrstph
 <hr/>
 
 ## 📫 Contato
+
 <p align="center">
   <a href="https://www.linkedin.com/in/christopherparaizo/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="mailto:wanjo.christopher@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
 </p>
