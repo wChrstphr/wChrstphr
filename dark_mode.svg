@@ -1,15 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="250" viewBox="0 0 620 250" font-family="Consolas, Monaco, monospace" font-size="13">
-<rect width="620" height="250" rx="10" fill="#161b22" stroke="#30363d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="310" viewBox="0 0 620 310" font-family="Consolas, Monaco, monospace" font-size="13">
+<rect width="620" height="310" rx="10" fill="#161b22" stroke="#30363d"/>
 <text x="24" y="30" fill="#38bdae" font-weight="bold">christopher@github</text>
 <line x1="24" y1="36" x2="596" y2="36" stroke="#57606a"/>
 <text x="24" y="50"><tspan fill="#ff9868">OS: </tspan><tspan fill="#a9fef7">Linux / Windows 11 / Android</tspan></text>
-<text x="24" y="70"><tspan fill="#ff9868">Host: </tspan><tspan fill="#a9fef7">Presidência da República — DSIC</tspan></text>
+<text x="24" y="70"><tspan fill="#ff9868">Host: </tspan><tspan fill="#a9fef7">Presidência da República, DSIC</tspan></text>
 <text x="24" y="90"><tspan fill="#ff9868">Kernel: </tspan><tspan fill="#a9fef7">Engenharia de Software @ UnB</tspan></text>
 <text x="24" y="110"><tspan fill="#ff9868">IDE: </tspan><tspan fill="#a9fef7">VS Code + Claude Code</tspan></text>
-<text x="24" y="130"><tspan fill="#ff9868">uptime.software: </tspan><tspan fill="#a9fef7">1 ano, 7 meses</tspan></text>
-<text x="24" y="150"><tspan fill="#ff9868">Hobbies: </tspan><tspan fill="#a9fef7">Leitura, Viagens, Natação</tspan></text>
-<text x="24" y="170"><tspan fill="#ff9868">Contato: </tspan><tspan fill="#a9fef7">linkedin.com/in/christopherparaizo · github.com/wChrstphr</tspan></text>
-<line x1="24" y1="184" x2="596" y2="184" stroke="#57606a"/>
-<text x="24" y="198" fill="#a9fef7">Repos: 15 | Stars: 0 | Commits: 1382 | Followers: 29</text>
-<text x="24" y="218"><tspan fill="#a6e22e">+115387</tspan><tspan fill="#a9fef7"> / </tspan><tspan fill="#f92672">-37248</tspan><tspan fill="#57606a"> lines of code</tspan></text>
+<text x="24" y="130"><tspan fill="#ff9868">languages.programming: </tspan><tspan fill="#a9fef7">Python, Java, C/C++, TypeScript, JavaScript, SQL</tspan></text>
+<text x="24" y="150"><tspan fill="#ff9868">languages.computer: </tspan><tspan fill="#a9fef7">HTML, CSS, LaTeX, Markdown, YAML</tspan></text>
+<text x="24" y="170"><tspan fill="#ff9868">languages.real: </tspan><tspan fill="#a9fef7">Português, Inglês</tspan></text>
+<text x="24" y="190"><tspan fill="#ff9868">uptime.software: </tspan><tspan fill="#a9fef7">1 ano, 7 meses</tspan></text>
+<text x="24" y="210"><tspan fill="#ff9868">Hobbies: </tspan><tspan fill="#a9fef7">Leitura, Viagens, Natação</tspan></text>
+<text x="24" y="230"><tspan fill="#ff9868">Contato: </tspan><tspan fill="#a9fef7">linkedin.com/in/christopherparaizo · github.com/wChrstphr</tspan></text>
+<line x1="24" y1="244" x2="596" y2="244" stroke="#57606a"/>
+<text x="24" y="258" fill="#a9fef7">Repos: 15 | Stars: 0 | Commits: 1385 | Followers: 29</text>
+<text x="24" y="278"><tspan fill="#a6e22e">+115452</tspan><tspan fill="#a9fef7"> / </tspan><tspan fill="#f92672">-39519</tspan><tspan fill="#57606a"> lines of code</tspan></text>
 </svg>
