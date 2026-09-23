@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 CARD_WIDTH = 620
-CARD_HEIGHT = 250
+CARD_HEIGHT = 310
 
 TEXT_LEFT = 24
 LINE_H = 20
@@ -29,12 +29,26 @@ _THEMES = {
     },
 }
 
-_FIELD_ORDER = ["os", "host", "kernel", "ide", "uptime", "hobbies", "contact"]
+_FIELD_ORDER = [
+    "os",
+    "host",
+    "kernel",
+    "ide",
+    "lang_programming",
+    "lang_computer",
+    "lang_real",
+    "uptime",
+    "hobbies",
+    "contact",
+]
 _FIELD_LABELS = {
     "os": "OS",
     "host": "Host",
     "kernel": "Kernel",
     "ide": "IDE",
+    "lang_programming": "languages.programming",
+    "lang_computer": "languages.computer",
+    "lang_real": "languages.real",
     "uptime": "uptime.software",
     "hobbies": "Hobbies",
     "contact": "Contato",
