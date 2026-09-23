@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 CARD_WIDTH = 620
-CARD_HEIGHT = 310
+CARD_HEIGHT = 290
 
 TEXT_LEFT = 24
 LINE_H = 20
@@ -35,7 +35,6 @@ _FIELD_ORDER = [
     "kernel",
     "ide",
     "lang_programming",
-    "lang_computer",
     "lang_real",
     "uptime",
     "hobbies",
@@ -47,7 +46,6 @@ _FIELD_LABELS = {
     "kernel": "Kernel",
     "ide": "IDE",
     "lang_programming": "languages.programming",
-    "lang_computer": "languages.computer",
     "lang_real": "languages.real",
     "uptime": "uptime.software",
     "hobbies": "Hobbies",

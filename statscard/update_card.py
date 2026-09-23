@@ -24,7 +24,6 @@ FIELDS_STATIC = {
     "kernel": "Engenharia de Software @ UnB",
     "ide": "VS Code + Claude Code",
     "lang_programming": "Python, Java, C/C++, TypeScript, JavaScript, SQL",
-    "lang_computer": "HTML, CSS, LaTeX, Markdown, YAML",
     "lang_real": "Português, Inglês",
     "hobbies": "Leitura, Viagens, Natação",
     "contact": "linkedin.com/in/christopherparaizo · github.com/wChrstphr",

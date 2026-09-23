@@ -6,7 +6,6 @@ _FIELDS = {
     "kernel": "Engenharia de Software @ UnB",
     "ide": "VS Code + Claude Code",
     "lang_programming": "Python, Java, C/C++, TypeScript, JavaScript, SQL",
-    "lang_computer": "HTML, CSS, LaTeX, Markdown, YAML",
     "lang_real": "Português, Inglês",
     "uptime": "1 ano, 7 meses",
     "hobbies": "Leitura, Viagens, Natação",
@@ -17,7 +16,7 @@ _STATS = {"repos": 12, "stars": 34, "commits": 567, "followers": 8, "additions":
 
 def test_render_svg_is_well_formed_and_correct_size():
     svg = render_svg("dark", _FIELDS, _STATS)
-    assert svg.startswith('<svg xmlns="http://www.w3.org/2000/svg" width="620" height="310"')
+    assert svg.startswith('<svg xmlns="http://www.w3.org/2000/svg" width="620" height="290"')
     assert svg.rstrip().endswith("</svg>")
 
 
@@ -38,8 +37,6 @@ def test_render_svg_includes_all_fields_and_stats():
     assert "Leitura, Viagens, Natação" in svg
     assert "languages.programming" in svg
     assert "Python, Java, C/C++, TypeScript, JavaScript, SQL" in svg
-    assert "languages.computer" in svg
-    assert "HTML, CSS, LaTeX, Markdown, YAML" in svg
     assert "languages.real" in svg
     assert "Português, Inglês" in svg
     assert "Repos: 12" in svg
