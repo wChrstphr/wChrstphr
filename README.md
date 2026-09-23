@@ -4,10 +4,10 @@
 ## 🚀 Sobre mim
 
 - 🎓 Estudante de Engenharia de Software na UnB, em fase final da graduação
-- 💼 Coordenador de Projetos na Presidência da República (DSIC) — antes disso, Chefe de Projeto e Estagiário em Engenharia de Software
-- 🛠️ Construí automações que reduziram em até 90% o tempo de processos manuais, conduzi migrações de banco sem downtime, e ajudei a tirar do ar projetos como o UnBTV e o Capital Nexus
+- 💼 Coordenador de Projetos na Presidência da República (DSIC). Antes, fui Chefe de Projeto e Estagiário em Engenharia de Software
+- 🛠️ Construí automações que reduziram em até 90% o tempo de processos manuais, conduzi migrações de banco sem downtime, trabalhei com arquitetura de microsserviços no [UnBTV](https://github.com/UnBTV) e desenvolvi o [Capital Nexus](https://github.com/wChrstphr/2025.1-T01-CapitalNexus/tree/main)
 - 🧠 Trabalho com Python, SQL, Docker e Power BI no dia a dia, e uso Claude Code como parte do fluxo de desenvolvimento
-- 📍 Brasília, DF — nas horas vagas, gosto de ler, viajar e nadar
+- 📍 Brasília, DF. Nas horas vagas, gosto de ler, viajar e nadar
 
 <hr/>
 
